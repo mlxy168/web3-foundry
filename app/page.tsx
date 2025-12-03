@@ -4,16 +4,20 @@ export default function Home() {
       {/* Hero */}
       <section className="text-center py-24 px-4">
         <h1 className="text-5xl font-bold mb-6">Web3 创业工厂</h1>
-        <p className="text-gray-400 text-lg">
-          从 0 到 1，系统打造你的 Web3 项目
+        <p className="text-gray-400 text-lg max-w-xl mx-auto">
+          为非技术背景创业者打造的 Web3 实战平台，
+          教你从0到上线一个真实项目、发币、融资、搭DAO。
         </p>
+
         <div className="mt-8 space-x-4">
-          <button className="bg-white text-black px-6 py-3 rounded-lg">
-            免费开始
-          </button>
-          <button className="border border-gray-600 px-6 py-3 rounded-lg">
-            查看课程
-          </button>
+         <a href="/courses" className="bg-white text-black px-6 py-3 rounded-lg inline-block">
+          免费开始
+         </a>
+
+         <a href="/courses" className="border border-gray-600 px-6 py-3 rounded-lg inline-block">
+          查看课程
+         </a>
+
         </div>
       </section>
 
