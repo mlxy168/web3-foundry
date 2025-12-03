@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "./components/AuthProvider";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,17 +20,11 @@ export const metadata = {
     "Web3 创业工厂，专为非技术创业者打造的区块链创业教育平台，系统学习：Web3、发币、DAO、融资、代币经济学。",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="zh-CN">
+      <body>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );
